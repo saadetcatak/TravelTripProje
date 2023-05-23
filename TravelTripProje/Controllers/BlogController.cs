@@ -10,11 +10,15 @@ namespace TravelTripProje.Controllers
     public class BlogController : Controller
     {
         Context c = new Context();
+        BlogYorum b = new BlogYorum();
         public ActionResult Index()
         {
-            var bloglar =c.Blogs.ToList();
+            //var bloglar =c.Blogs.ToList();
+            b.Deger1=c.Blogs.ToList();
+            /*b.Deger3=c.Blogs.Take(3).ToList()*/;
+            b.Deger3 = c.Blogs.OrderByDescending(x => x.BlogID).Take(3).ToList();
 
-            return View(bloglar);
+            return View(b);
         }
 
         BlogYorum by = new BlogYorum();
@@ -22,6 +26,7 @@ namespace TravelTripProje.Controllers
         {
             //var blogbul=c.Blogs.Where(x=>x.BlogID==id).ToList();
             by.Deger1=c.Blogs.Where(x=>x.BlogID==id).ToList();
+            by.Deger2=c.Yorumlars.Where(x=>x.BlogID==id).ToList() ;
             return View(by);
         }
     }
