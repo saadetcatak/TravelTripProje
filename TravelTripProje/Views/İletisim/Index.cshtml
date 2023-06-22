@@ -1,0 +1,55 @@
+﻿@model TravelTripProje.Models.Siniflar.İletisim
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="contact">
+    <div class="wrap">
+        <div class="contact-top">
+            <h3>İletişim Bilgileri</h3>
+            <p> Benimle iletişime geçebilirsiniz</p>
+        </div>
+        <div class="form">
+            <form class="cmxform" id="contactForm" method="post">
+                <div>
+                    <input type="text" class="textbox" required="" name="AdSoyad" placeholder="İsminiz :">
+                </div>
+                <div>
+                    <input type="text" class="textbox" placeholder="Mail :" required="" name="Mail">
+                </div>
+                <div>
+                    <input type="text" class="textbox" placeholder="Konu :" name="Konu" required="">
+                </div>
+
+                <div class="form1">
+
+                    <textarea placeholder="Mesajınızı Yazınız" required="" name="Mesaj"> </textarea>
+
+                </div>
+                <p><button class="read">Gönder</button></p>
+            </form>
+        </div>
+
+
+
+        <div class="clear"></div>
+        <div class="contact-bottom">
+            <div class="contact-left">
+                <div class="contact-add">
+                    <h3>Adres</h3>
+                    <p>Selçuklu/Konya</p>
+                    <p>Telefon:0545 000 00 00</p>
+
+                    <p>Mail: <a href="mailto:saadetcatak1453@gmail.com">saadetcatak1453@gmail.com</a></p>
+                </div>
+
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1GvnAZWHiJBd3o6z0Ggm_01cyWYFTpwM&ehbc=2E312F" width="640" height="480"></iframe>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
